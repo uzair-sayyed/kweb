@@ -4,6 +4,7 @@ import BusinessVerticals from "./components/BusinessVerticals";
 import HeroBanner from "./components/HeroBanner";
 import History from "./components/History";
 import ProductShowCase from "./components/ProductShowcase";
+import ProductShowcaseSlider2 from "./components/ProductShowcaseSlider2";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroBanner />
       <About />
       {/* <ProductShowCase /> */}
+      <ProductShowcaseSlider2/>
       <History />
       <BusinessVerticals />
     </>

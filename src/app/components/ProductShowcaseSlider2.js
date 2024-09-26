@@ -209,7 +209,7 @@ const categories = [
   },
 ];
 
-export default function ProductShowcaseSlider() {
+export default function ProductShowcaseSlider2() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   const settings = {
@@ -230,7 +230,7 @@ export default function ProductShowcaseSlider() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -238,11 +238,11 @@ export default function ProductShowcaseSlider() {
   };
 
   return (
-    <div className='max-w-[1400px] mx-auto py-8 mt-[30px]'>
-      <div className='grid md:grid-cols-4 gap-16'>
+    <div className='max-w-[1400px] mx-auto py-8 mt-[30px] product_slider'>
+      <div className='grid md:grid-cols-12'>
         {/* Left side category list */}
-        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto'>
-          <ul>
+        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto col-span-3'>
+          <ul className="!max-w-[100wv]">
             {categories.map((category) => (
               <li
                 key={category.id}
@@ -262,13 +262,13 @@ export default function ProductShowcaseSlider() {
         </div>
 
         {/* Products slider */}
-        <div className='md:col-span-3 w-full'>
-          <div className='products_slider relative'>
+        <div className='md:col-span-9 w-full'>
+          <div className='products_slider relative px-2'>
             <Slider {...settings}>
               {activeCategory.products.map((product) => (
                 <div
                   key={product.id}
-                  className='max-h-[446px] max-w-[300px] pb-4 border hover:border-[#0D63AD] hover:shadow-md rounded-[20px] mx-auto'
+                  className='max-h-max max-w-[300px] border hover:border-[#0D63AD] hover:shadow-md rounded-[20px] mx-auto'
                 >
                   <div className='bg-white border rounded-[20px] p-[13px] text-center flex flex-col gap-y-2'>
                     <div className='bg-[#F3F6FA] rounded-[20px] h-[282px]'>
@@ -293,7 +293,7 @@ export default function ProductShowcaseSlider() {
       </div>
 
       {/* Responsive layout - category on top, slider below */}
-      <div className='block md:hidden w-full mt-10'>
+      {/* <div className='block md:hidden w-full mt-10'>
         <ul className='border-t border-gray-300 pt-4'>
           {categories.map((category) => (
             <li
@@ -311,9 +311,9 @@ export default function ProductShowcaseSlider() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
 
-      <div className='block md:hidden w-full mt-4'>
+      {/* <div className='block md:hidden w-full mt-4'>
         <Slider {...settings}>
           {activeCategory.products.map((product) => (
             <div
@@ -338,7 +338,7 @@ export default function ProductShowcaseSlider() {
             </div>
           ))}
         </Slider>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -361,7 +361,7 @@ function SampleNextArrow(props) {
       }}
       onClick={onClick}
     >
-      <FaArrowRightLong className='text-4xl' />
+      <FaArrowRightLong className='text-[20px]' />
     </div>
   );
 }
@@ -384,7 +384,7 @@ function SamplePrevArrow(props) {
       }}
       onClick={onClick}
     >
-      <FaArrowLeftLong className='text-4xl' />
+      <FaArrowLeftLong className='text-[20px]' />
     </div>
   );
 }

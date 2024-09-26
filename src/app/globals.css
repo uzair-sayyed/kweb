@@ -43,6 +43,7 @@ body {
 }
 .products_slider .slick-list{
   padding-bottom: 20px;
+  max-width: 100vw;
 }
 .products_slider .slick-next, .products_slider .slick-prev{
   top: -7%;
