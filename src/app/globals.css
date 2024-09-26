@@ -1,3 +1,5 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,21 +9,54 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
-
+} */
+/* 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.hero_banner .slick-slide {
+  height: 100vh; /* Adjust this value as needed */
+}
+
+.hero_banner .slick-list {
+  height: 100vh; /* Match the height of the slide */
+}
+.hero_banner .slick-slide img{
+  height: 100vh !important;
+}
+.hero_banner .slick-slide > div{
+  height: 100%;
+}
+.products_slider .slick-list{
+  padding-bottom: 20px;
+}
+.products_slider .slick-next, .products_slider .slick-prev{
+  top: -7%;
+}
+.products_slider .slick-arrow.slick-next{
+  right: 5% !important;
+
+}
+.products_slider .slick-arrow.slick-prev{
+  left: 88% !important;
+}
+.products_slider .slick-arrow::before{
+  display: none;
+}
+.history .slick-arrow::before{
+  display: none;
 }
