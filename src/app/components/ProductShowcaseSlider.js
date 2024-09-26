@@ -230,7 +230,7 @@ export default function ProductShowcaseSlider() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -238,11 +238,11 @@ export default function ProductShowcaseSlider() {
   };
 
   return (
-    <div className='max-w-[1400px] mx-auto py-8 mt-[30px]'>
-      <div className='grid md:grid-cols-4 gap-16'>
+    <div className='max-w-[1400px] mx-auto md:py-8 mt-[15px] md:mt-[30px] product_slider'>
+      <div className='grid md:grid-cols-12 overflow-hidden'>
         {/* Left side category list */}
-        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto'>
-          <ul>
+        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto col-span-3 mb-10 md:mb-0'>
+          <ul className="!max-w-[100wv]">
             {categories.map((category) => (
               <li
                 key={category.id}
@@ -262,27 +262,27 @@ export default function ProductShowcaseSlider() {
         </div>
 
         {/* Products slider */}
-        <div className='md:col-span-3 w-full'>
-          <div className='products_slider relative'>
+        <div className='md:col-span-9 w-full'>
+          <div className='products_slider relative px-2'>
             <Slider {...settings}>
               {activeCategory.products.map((product) => (
                 <div
                   key={product.id}
-                  className='max-h-[446px] max-w-[300px] pb-4 border hover:border-[#0D63AD] hover:shadow-md rounded-[20px] mx-auto'
+                  className='max-h-max max-w-[300px] border hover:border-[#0D63AD] hover:shadow-lg rounded-[20px] mx-auto !w-[90%] md:w-full '
                 >
                   <div className='bg-white border rounded-[20px] p-[13px] text-center flex flex-col gap-y-2'>
-                    <div className='bg-[#F3F6FA] rounded-[20px] h-[282px]'>
+                    <div className='bg-[#F3F6FA] rounded-[20px] h-[200px] md:h-[282px]'>
                       <Image
                         src={product.image}
                         alt={product.title}
-                        className='h-[100%] rounded-[20px]'
+                        className='h-[100%] rounded-[20px] object-contain'
                       />
                     </div>
                     <div className='bg-[#F3F6FA] rounded-[20px] h-[126px] p-[13px]'>
-                      <h3 className='font-bold text-[25px] text-[#0D63AD] mt-4 leading-[35px]'>
+                      <h3 className='font-bold text-[18px] md:text-[25px] text-[#0D63AD] mt-0 md:mt-4 leading-[35px]'>
                         {product.title}
                       </h3>
-                      <p className='text-lg'>{product.description}</p>
+                      <p className='text-[14px] md:text-lg'>{product.description}</p>
                     </div>
                   </div>
                 </div>
@@ -290,54 +290,6 @@ export default function ProductShowcaseSlider() {
             </Slider>
           </div>
         </div>
-      </div>
-
-      {/* Responsive layout - category on top, slider below */}
-      <div className='block md:hidden w-full mt-10'>
-        <ul className='border-t border-gray-300 pt-4'>
-          {categories.map((category) => (
-            <li
-              key={category.id}
-              className={`cursor-pointer ${
-                activeCategory.id === category.id
-                  ? "font-medium text-[#0D63AD] text-[18px] mb-[18px] leading-[35px] w-max"
-                  : "font-medium text-[18px] mb-[18px] leading-[35px] w-max"
-              }`}
-              onClick={() => {
-                setActiveCategory(category);
-              }}
-            >
-              {category.name}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className='block md:hidden w-full mt-4'>
-        <Slider {...settings}>
-          {activeCategory.products.map((product) => (
-            <div
-              key={product.id}
-              className='max-h-[446px] max-w-[300px] pb-4 border hover:border-[#0D63AD] hover:shadow-md rounded-[20px] mx-auto'
-            >
-              <div className='bg-white border rounded-[20px] p-[13px] text-center flex flex-col gap-y-2'>
-                <div className='bg-[#F3F6FA] rounded-[20px] h-[282px]'>
-                  <Image
-                    src={product.image}
-                    alt={product.title}
-                    className='h-[100%] rounded-[20px]'
-                  />
-                </div>
-                <div className='bg-[#F3F6FA] rounded-[20px] h-[126px] p-[13px]'>
-                  <h3 className='font-bold text-[25px] text-[#0D63AD] mt-4 leading-[35px]'>
-                    {product.title}
-                  </h3>
-                  <p className='text-lg'>{product.description}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
       </div>
     </div>
   );
@@ -361,7 +313,7 @@ function SampleNextArrow(props) {
       }}
       onClick={onClick}
     >
-      <FaArrowRightLong className='text-4xl' />
+      <FaArrowRightLong className='text-[20px]' />
     </div>
   );
 }
@@ -384,7 +336,7 @@ function SamplePrevArrow(props) {
       }}
       onClick={onClick}
     >
-      <FaArrowLeftLong className='text-4xl' />
+      <FaArrowLeftLong className='text-[20px]' />
     </div>
   );
 }

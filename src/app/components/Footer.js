@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowUp } from "react-icons/fa6";
@@ -7,6 +8,9 @@ import img1 from "../../assets/images/footerimg1.png";
 import img2 from "../../assets/images/footerimg2.png";
 import img3 from "../../assets/images/footerimg3.png";
 export default function Footer() {
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <footer className='pt-16'>
       <div className='max-w-[1400px] mx-auto grid md:grid-cols-4 gap-4 md:gap-8 px-4 leading-[35px]'>
@@ -272,7 +276,7 @@ export default function Footer() {
 
       <div className='text-center mt-8 bg-[#EEECEC80] pb-[18px] px-6'>
         <div className='flex justify-center flex-col items-center gap-y-2'>
-          <div className='h-[30px] md:h-[50px] w-[30px] md:w-[50px] bg-[#0D63AD] rounded-full flex items-center justify-center mt-[-12px] mm:mt-[-20px]'>
+          <div className='h-[30px] md:h-[50px] w-[30px] md:w-[50px] bg-[#0D63AD] rounded-full flex items-center justify-center mt-[-12px] md:mt-[-20px] cursor-pointer' onClick={handleScrollToTop}>
             <FaArrowUp className='text-white text-[16px] md:text-[22px]' />
           </div>
           <p className='text-[14px] mt-2 md:mt-0 md:text-[16px]'>

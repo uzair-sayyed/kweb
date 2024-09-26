@@ -27,7 +27,7 @@ const History = () => {
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },

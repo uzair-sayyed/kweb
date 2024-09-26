@@ -1,6 +1,9 @@
+"use client"
+
 import Image from "next/image";
 import aboutimg from "../../assets/images/aboutimg.png";
 import playbtn from "../../assets/images/playbtn.png";
+import CountUp from 'react-countup';
 
 export default function About() {
   return (
@@ -32,15 +35,15 @@ export default function About() {
     </p>
     <div className='grid grid-cols-3 gap-4 mb-[30px]'>
       <div>
-        <h3 className="text-[30px] md:text-[50px] font-bold text-[#0D63AD]">31+</h3>
+        <h3 className="text-[30px] md:text-[50px] font-bold text-[#0D63AD]"><CountUp enableScrollSpy end={31}/>+</h3>
         <span className="text-[16px] md:text-[18px] leading-[30px]">Countries Served</span>
       </div>
       <div>
-        <h3 className="text-[30px] md:text-[50px] font-bold text-[#0D63AD]">8.5k+</h3>
+        <h3 className="text-[30px] md:text-[50px] font-bold text-[#0D63AD]"><CountUp enableScrollSpy end={8}/>.<CountUp enableScrollSpy end={5}/>k+</h3>
         <span className="text-[16px] md:text-[18px] leading-[30px]">Employee</span>
       </div>
       <div>
-        <h3 className="text-[30px] md:text-[50px] font-bold text-[#0D63AD]">25</h3>
+        <h3 className="text-[30px] md:text-[50px] font-bold text-[#0D63AD]"><CountUp enableScrollSpy end={25}/></h3>
         <span className="text-[16px] md:text-[18px] leading-[30px]">Manufacturing</span>
       </div>
     </div>
