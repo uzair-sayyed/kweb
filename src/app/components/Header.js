@@ -19,12 +19,12 @@ export default function Header() {
 
         <div className="hidden md:flex items-center">
           <div className="text-[#0D63AD] text-[18px] font-medium flex gap-x-6">
-            <Link href='/products'>Products</Link>
-            <Link href='/about-us'>About us</Link>
-            <Link href='/news-media'>News & Media</Link>
-            <Link href='/partner'>Become a Partner</Link>
-            <Link href='/careers'>Careers</Link>
-            <Link href='/contact-us'>Contact us</Link>
+            <Link href=''>Products</Link>
+            <Link href=''>About us</Link>
+            <Link href=''>News & Media</Link>
+            <Link href=''>Become a Partner</Link>
+            <Link href=''>Careers</Link>
+            <Link href=''>Contact us</Link>
           </div>
           <div className="flex items-center">
             <button>

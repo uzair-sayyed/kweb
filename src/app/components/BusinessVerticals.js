@@ -16,25 +16,25 @@ export default function BusinessVerticals() {
             Our Business Verticals
           </h2>
         </div>
-        <div className='grid text-center grid-cols-3 md:grid-cols-5 gap-16 md:pt-4'>
-          <div className=' h-[134px] flex flex-col gap-y-3'>
-            <Image src={vert1} alt='Adhesives, Sealants & Putty' className="h-[84px] w-auto object-contain mix-blend-multiply" />
+        <div className='grid text-center grid-cols-2 md:grid-cols-5 gap-8 md:gap-16 md:pt-4'>
+          <div className='h-[134px] flex flex-col gap-y-3'>
+            <Image src={vert1} alt='Adhesives, Sealants & Putty' className="h-[60px] md:h-[84px] w-auto object-contain mix-blend-multiply" />
             <p>Adhesives, Sealants & Putty</p>
           </div>
-          <div className=' h-[134px] flex flex-col gap-y-3'>
-            <Image src={vert2} alt='Faucets & Sanitaryware' className="h-[84px] w-auto object-contain mix-blend-multiply" />
+          <div className='h-[134px] flex flex-col gap-y-3'>
+            <Image src={vert2} alt='Faucets & Sanitaryware' className="h-[60px] md:h-[84px] w-auto object-contain mix-blend-multiply" />
             <p>Faucets & Sanitaryware</p>
           </div>
-          <div className=' h-[134px] flex flex-col gap-y-3'>
-            <Image src={vert3} alt='Interior & Exterior Paints' className="h-[84px] w-auto object-contain mix-blend-multiply" />
+          <div className='h-[134px] flex flex-col gap-y-3'>
+            <Image src={vert3} alt='Interior & Exterior Paints' className="h-[60px] md:h-[84px] w-auto object-contain mix-blend-multiply" />
             <p>Interior & Exterior Paints</p>
           </div>
-          <div className=' h-[134px] flex flex-col gap-y-3'>
-            <Image src={vert4} alt='Construction Chemicals & Waterproofing' className="h-[84px] w-auto object-contain mix-blend-multiply" />
+          <div className='h-[134px] flex flex-col gap-y-3'>
+            <Image src={vert4} alt='Construction Chemicals & Waterproofing' className="h-[60px] md:h-[84px] w-auto object-contain mix-blend-multiply" />
             <p>Construction Chemicals & Waterproofing</p>
           </div>
-          <div className=' h-[134px] flex flex-col gap-y-3'>
-            <Image src={vert5} alt='Adhesives, Sealants & Putty' className="h-[84px] w-auto object-contain mix-blend-multiply" />
+          <div className='h-[134px] flex flex-col gap-y-3'>
+            <Image src={vert5} alt='Adhesives, Sealants & Putty' className="h-[60px] md:h-[84px] w-auto object-contain mix-blend-multiply" />
             <p>Adhesives, Sealants & Putty</p>
           </div>
         </div>

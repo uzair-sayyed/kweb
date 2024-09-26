@@ -217,11 +217,11 @@ export default function ProductShowcaseSlider() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
-        breakpoint: 992,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -239,9 +239,9 @@ export default function ProductShowcaseSlider() {
 
   return (
     <div className='max-w-[1400px] mx-auto md:py-8 mt-[15px] md:mt-[30px] product_slider'>
-      <div className='grid md:grid-cols-12 overflow-hidden'>
+      <div className='grid md:grid-cols-12 '>
         {/* Left side category list */}
-        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto col-span-3 mb-10 md:mb-0'>
+        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto col-span-4 lg:col-span-3 mb-10 md:mb-0'>
           <ul className="!max-w-[100wv]">
             {categories.map((category) => (
               <li
@@ -262,13 +262,13 @@ export default function ProductShowcaseSlider() {
         </div>
 
         {/* Products slider */}
-        <div className='md:col-span-9 w-full'>
+        <div className='md:col-span-8 w-full'>
           <div className='products_slider relative px-2'>
             <Slider {...settings}>
               {activeCategory.products.map((product) => (
                 <div
                   key={product.id}
-                  className='max-h-max max-w-[300px] border hover:border-[#0D63AD] hover:shadow-lg rounded-[20px] mx-auto !w-[90%] md:w-full '
+                  className='max-h-max max-w-[300px] border hover:border-[#0D63AD] hover:shadow-lg rounded-[20px] mx-auto !w-[95%] lg:w-full '
                 >
                   <div className='bg-white border rounded-[20px] p-[13px] text-center flex flex-col gap-y-2'>
                     <div className='bg-[#F3F6FA] rounded-[20px] h-[200px] md:h-[282px]'>
@@ -295,7 +295,7 @@ export default function ProductShowcaseSlider() {
   );
 }
 
-function SampleNextArrow(props) {
+function CustomNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -318,7 +318,7 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
+function CustomPrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div

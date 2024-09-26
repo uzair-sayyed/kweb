@@ -5,7 +5,7 @@ export default function ProductShowCase() {
   return (
     <div className='border-t-[#00000033] border-t-[1px]'>
       <div className='max-w-[1400px] mx-auto relative pt-[32px] md:pt-[64px] px-6'>
-        <div className='flex-col md:flex gap-x-[110px]'>
+        <div className='grid md:grid-cols-2 gap-x-[110px]'>
           <h2 className='max-w-[385px] text-[24px] md:text-[35px] font-medium leading-[50px] basis-[100%]'>
             Born in Gujrat, India making waves across the world
           </h2>

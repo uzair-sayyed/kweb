@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowUp } from "react-icons/fa6";
@@ -9,7 +9,7 @@ import img2 from "../../assets/images/footerimg2.png";
 import img3 from "../../assets/images/footerimg3.png";
 export default function Footer() {
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <footer className='pt-16'>
@@ -18,32 +18,32 @@ export default function Footer() {
           <h4 className='text-[20px] font-medium mb-4'>Products</h4>
           <ul className='hidden md:block'>
             <li>
-              <Link href='/products/adhesives' className=''>
+              <Link href='/products/adhesives' className='hover:text-[#0D63AD]'>
                 Plumbing Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/products/paints' className=''>
+              <Link href='/products/paints' className='hover:text-[#0D63AD]'>
                 Sewerage Drainage Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/products/faucets' className=''>
+              <Link href='/products/faucets' className='hover:text-[#0D63AD]'>
                 Agriculture Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/products/sealants' className=''>
+              <Link href='/products/sealants' className='hover:text-[#0D63AD]'>
                 Water Tanks
               </Link>
             </li>
             <li>
-              <Link href='/products/sealants' className=''>
+              <Link href='/products/sealants' className='hover:text-[#0D63AD]'>
                 Industrial Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/products/sealants' className=''>
+              <Link href='/products/sealants' className='hover:text-[#0D63AD]'>
                 Cable Protection
               </Link>
             </li>
@@ -51,62 +51,74 @@ export default function Footer() {
 
           <ul className='block md:hidden'>
             <li>
-              <Link href='/products/adhesives' className=''>
+              <Link href='/products/adhesives' className='hover:text-[#0D63AD]'>
                 Plumbing Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/products/paints' className=''>
+              <Link href='/products/paints' className='hover:text-[#0D63AD]'>
                 Sewerage Drainage Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/products/faucets' className=''>
+              <Link href='/products/faucets' className='hover:text-[#0D63AD]'>
                 Agriculture Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/products/sealants' className=''>
+              <Link href='/products/sealants' className='hover:text-[#0D63AD]'>
                 Water Tanks
               </Link>
             </li>
             <li>
-              <Link href='/products/sealants' className=''>
+              <Link href='/products/sealants' className='hover:text-[#0D63AD]'>
                 Industrial Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/products/sealants' className=''>
+              <Link href='/products/sealants' className='hover:text-[#0D63AD]'>
                 Cable Protection
               </Link>
             </li>
             <li>
-              <Link href='/news/latest' className=' '>
+              <Link href='/news/latest' className='hover:text-[#0D63AD]'>
                 Fire Sprinklers Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/news/events' className=' '>
+              <Link href='/news/events' className='hover:text-[#0D63AD]'>
                 Urban Infrastructure
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Ancillary Products
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Solvent Cement
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Insulation Tube
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Specialty Fittings
               </Link>
             </li>
@@ -117,32 +129,44 @@ export default function Footer() {
           <h4 className='text-[20px] font-medium mb-4 invisible '>.</h4>
           <ul>
             <li>
-              <Link href='/news/latest' className=' '>
+              <Link href='/news/latest' className='hover:text-[#0D63AD]'>
                 Fire Sprinklers Pipes & Fittings
               </Link>
             </li>
             <li>
-              <Link href='/news/events' className=' '>
+              <Link href='/news/events' className='hover:text-[#0D63AD]'>
                 Urban Infrastructure
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Ancillary Products
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Solvent Cement
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Insulation Tube
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Specialty Fittings
               </Link>
             </li>
@@ -153,17 +177,20 @@ export default function Footer() {
           <h4 className='text-[20px] font-medium mb-4 '>News & Media</h4>
           <ul>
             <li>
-              <Link href='/news/latest' className=' '>
+              <Link href='/news/latest' className='hover:text-[#0D63AD]'>
                 About us
               </Link>
             </li>
             <li>
-              <Link href='/news/events' className=' '>
+              <Link href='/news/events' className='hover:text-[#0D63AD]'>
                 Piping Guidelines
               </Link>
             </li>
             <li>
-              <Link href='/news/press-releases' className=' '>
+              <Link
+                href='/news/press-releases'
+                className='hover:text-[#0D63AD]'
+              >
                 Careers
               </Link>
             </li>
@@ -172,25 +199,30 @@ export default function Footer() {
 
         <div>
           <h4 className='text-[20px] font-medium mb-4'>Contact Us</h4>
-          <p className=''>
+          <p className='hover:text-[#0D63AD]'>
             ASTRAL HOUSE 207/1, Behinde Rajpath Club, Off. S.G. Highway,
             Ahmedabad - 380059. India.
           </p>
           <p className=''>
             Phone:{" "}
-            <a href='tel: +91-79-66212000' className=''>
+            <a href='tel: +91-79-66212000' className='hover:text-[#0D63AD]'>
               +91-79-66212000
             </a>
           </p>
           <p className=''>
             Telefax:{" "}
-            <a href='tel:+91-79-66212121' className=''>
-              ++91-79-66212121
+            <a href='tel:+91-79-66212121' className='hover:text-[#0D63AD]'>
+              +91-79-66212121
             </a>
           </p>
-          <p className=''>
+          <p>
             Email:{" "}
-            <a href='mailto:info@astralpipes.com'>info@astralpipes.com</a>
+            <a
+              href='mailto:info@astralpipes.com'
+              className='hover:text-[#0D63AD]'
+            >
+              info@astralpipes.com
+            </a>
           </p>
           <div className='mt-4'>
             <Image src={socialIcon} />
@@ -245,16 +277,56 @@ export default function Footer() {
       <div className='mt-[50px] mb-[42px] max-w-[1400px] mx-auto px-6'>
         <div>
           <h4 className='font-medium text-[20px] mb-3'>Products</h4>
-          <p className='leading-[35px]'>
-            Air Admittance Valve | Aquarius | Aquarius+ | Aquasafe | Back Flow
-            Preventer Valve | Basin Trap | Bore-well | Case-Well | Chem Pro
-            Clamps & Hangers | Cleo | CPVC PRO | D-Rex | Delta | Drain Hulk |
-            Drain Pro | Drain Top | Drainmaster | Droplet | ECO PRO | Fire pro |
-            Foamcore | Geo-Rex | Gully Trap | Insu PRO | MultiPex | Opta | Pex-a
-            PRO | Pio | Pipe Fix | Plus+StiRex | Power Drain | Power Flex |
-            Pre-StiRex | Rainway | Sarita | Silencio | Sylo | TeleRex |
-            Thermoplastic Ball Valve | Underground | Vito | WELD-ON | Wire Guard
-            | Y-STRAINER
+          <p className='leading-[35px] cursor-pointer'>
+            <span className='hover:text-[#0D63AD]'>Air Admittance Valve</span> |
+            <span className='hover:text-[#0D63AD]'> Aquarius </span> |
+            <span className='hover:text-[#0D63AD]'> Aquarius+ </span> |
+            <span className='hover:text-[#0D63AD]'> Aquasafe </span> |
+            <span className='hover:text-[#0D63AD]'> Back Flow </span> |
+            <span className='hover:text-[#0D63AD]'> Preventer Valve </span> |
+            <span className='hover:text-[#0D63AD]'> Basin Trap </span> |
+            <span className='hover:text-[#0D63AD]'> Bore-well </span> |
+            <span className='hover:text-[#0D63AD]'> Case-Well </span> |
+            <span className='hover:text-[#0D63AD]'> Chem Pro </span> |
+            <span className='hover:text-[#0D63AD]'> Clamps & Hangers </span> |
+            <span className='hover:text-[#0D63AD]'> Cleo </span> |
+            <span className='hover:text-[#0D63AD]'> CPVC PRO </span> |
+            <span className='hover:text-[#0D63AD]'> D-Rex </span> |
+            <span className='hover:text-[#0D63AD]'> Delta </span> |
+            <span className='hover:text-[#0D63AD]'> Drain Hulk </span> |
+            <span className='hover:text-[#0D63AD]'> Drain Pro </span> |
+            <span className='hover:text-[#0D63AD]'> Drain Top </span> |
+            <span className='hover:text-[#0D63AD]'> Drainmaster </span> |
+            <span className='hover:text-[#0D63AD]'> Droplet </span> |
+            <span className='hover:text-[#0D63AD]'> ECO PRO </span> |
+            <span className='hover:text-[#0D63AD]'> Fire Pro </span> |
+            <span className='hover:text-[#0D63AD]'> Foamcore </span> |
+            <span className='hover:text-[#0D63AD]'> Geo-Rex </span> |
+            <span className='hover:text-[#0D63AD]'> Gully Trap </span> |
+            <span className='hover:text-[#0D63AD]'> Insu PRO </span> |
+            <span className='hover:text-[#0D63AD]'> MultiPex </span> |
+            <span className='hover:text-[#0D63AD]'> Opta </span> |
+            <span className='hover:text-[#0D63AD]'> Pex-a PRO </span> |
+            <span className='hover:text-[#0D63AD]'> Pio </span> |
+            <span className='hover:text-[#0D63AD]'> Pipe Fix </span> |
+            <span className='hover:text-[#0D63AD]'> Plus+StiRex </span> |
+            <span className='hover:text-[#0D63AD]'> Power Drain </span> |
+            <span className='hover:text-[#0D63AD]'> Power Flex </span> |
+            <span className='hover:text-[#0D63AD]'> Pre-StiRex </span> |
+            <span className='hover:text-[#0D63AD]'> Rainway </span> |
+            <span className='hover:text-[#0D63AD]'> Sarita </span> |
+            <span className='hover:text-[#0D63AD]'> Silencio </span> |
+            <span className='hover:text-[#0D63AD]'> Sylo </span> |
+            <span className='hover:text-[#0D63AD]'> TeleRex </span> |
+            <span className='hover:text-[#0D63AD]'>
+              {" "}
+              Thermoplastic Ball Valve{" "}
+            </span>{" "}
+            |<span className='hover:text-[#0D63AD]'> Underground </span> |
+            <span className='hover:text-[#0D63AD]'> Vito </span> |
+            <span className='hover:text-[#0D63AD]'> WELD-ON </span> |
+            <span className='hover:text-[#0D63AD]'> Wire Guard </span> |
+            <span className='hover:text-[#0D63AD]'> Y-STRAINER </span>
           </p>
         </div>
       </div>
@@ -276,7 +348,10 @@ export default function Footer() {
 
       <div className='text-center mt-8 bg-[#EEECEC80] pb-[18px] px-6'>
         <div className='flex justify-center flex-col items-center gap-y-2'>
-          <div className='h-[30px] md:h-[50px] w-[30px] md:w-[50px] bg-[#0D63AD] rounded-full flex items-center justify-center mt-[-12px] md:mt-[-20px] cursor-pointer' onClick={handleScrollToTop}>
+          <div
+            className='h-[30px] md:h-[50px] w-[30px] md:w-[50px] bg-[#0D63AD] rounded-full flex items-center justify-center mt-[-12px] md:mt-[-20px] cursor-pointer'
+            onClick={handleScrollToTop}
+          >
             <FaArrowUp className='text-white text-[16px] md:text-[22px]' />
           </div>
           <p className='text-[14px] mt-2 md:mt-0 md:text-[16px]'>
