@@ -1,8 +1,7 @@
-import Image from "next/image";
-import showcasetop from "../../assets/images/showcasetop.png";
+
 import ProductShowcaseSlider from "./ProductShowcaseSlider";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { FaArrowLeftLong } from "react-icons/fa6";
+
+
 export default function ProductShowCase() {
   return (
     <div className=' border-t-[#00000033] border-t-[1px]'>

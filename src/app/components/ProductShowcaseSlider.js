@@ -8,7 +8,6 @@ import product2 from "../../assets/images/p2.png";
 import product3 from "../../assets/images/p3.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaArrowLeftLong } from "react-icons/fa6";
-
 const categories = [
   {
     id: 1,
@@ -104,7 +103,6 @@ const categories = [
         description: "Cross-linked PE - Hot & Cold Water Plumbing System",
         image: product3,
       },
-
     ],
   },
   {
@@ -213,21 +211,37 @@ const categories = [
 
 export default function ProductShowcaseSlider() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
-  console.log(activeCategory);
+
   const settings = {
     dots: false,
-    // infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
     <div className='max-w-[1400px] mx-auto py-8 mt-[30px]'>
       <div className='grid md:grid-cols-4 gap-16'>
-        <div className='border-l border-gray-300 pl-[30px]'>
+
+        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto'>
           <ul>
             {categories.map((category) => (
               <li
@@ -238,8 +252,7 @@ export default function ProductShowcaseSlider() {
                     : "font-medium text-[18px] mb-[18px] leading-[35px] w-max"
                 }`}
                 onClick={() => {
-                  //   console.log(`clicked on ${category.name}`); 
-                  setActiveCategory(category); 
+                  setActiveCategory(category);
                 }}
               >
                 {category.name}
@@ -248,29 +261,83 @@ export default function ProductShowcaseSlider() {
           </ul>
         </div>
 
-        <div className='col-span-3 products_slider relative'>
-          <Slider {...settings}>
-            {activeCategory.products.map((product) => (
-              <div key={product.id} className='max-h-[446px] max-w-[300px] pb-4 border hover:border-[#0D63AD] hover:shadow-md rounded-[20px]'>
-                <div className='bg-white border rounded-[20px] p-[13px] text-center flex flex-col gap-y-2'>
-                  <div className='bg-[#F3F6FA] rounded-[20px] h-[282px]'>
-                    <Image
-                      src={product.image}
-                      alt={product.title}
-                      className='h-[100%] rounded-[20px]'
-                    />
-                  </div>
-                  <div className='bg-[#F3F6FA] rounded-[20px] h-[126px] p-[13px] '>
-                    <h3 className='font-bold text-[25px] text-[#0D63AD] mt-4 leading-[35px]'>
-                      {product.title}
-                    </h3>
-                    <p className='text-lg'>{product.description}</p>
+
+        <div className='md:col-span-3 w-full'>
+          <div className='products_slider relative'>
+            <Slider {...settings}>
+              {activeCategory.products.map((product) => (
+                <div
+                  key={product.id}
+                  className='max-h-[446px] max-w-[300px] pb-4 border hover:border-[#0D63AD] hover:shadow-md rounded-[20px] mx-auto'
+                >
+                  <div className='bg-white border rounded-[20px] p-[13px] text-center flex flex-col gap-y-2'>
+                    <div className='bg-[#F3F6FA] rounded-[20px] h-[282px]'>
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        className='h-[100%] rounded-[20px]'
+                      />
+                    </div>
+                    <div className='bg-[#F3F6FA] rounded-[20px] h-[126px] p-[13px]'>
+                      <h3 className='font-bold text-[25px] text-[#0D63AD] mt-4 leading-[35px]'>
+                        {product.title}
+                      </h3>
+                      <p className='text-lg'>{product.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          </div>
         </div>
+      </div>
+
+
+      <div className='block md:hidden w-full mt-10'>
+        <ul className='border-t border-gray-300 pt-4'>
+          {categories.map((category) => (
+            <li
+              key={category.id}
+              className={`cursor-pointer ${
+                activeCategory.id === category.id
+                  ? "font-medium text-[#0D63AD] text-[18px] mb-[18px] leading-[35px] w-max"
+                  : "font-medium text-[18px] mb-[18px] leading-[35px] w-max"
+              }`}
+              onClick={() => {
+                setActiveCategory(category);
+              }}
+            >
+              {category.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className='block md:hidden w-full mt-4'>
+        <Slider {...settings}>
+          {activeCategory.products.map((product) => (
+            <div
+              key={product.id}
+              className='max-h-[446px] max-w-[300px] pb-4 border hover:border-[#0D63AD] hover:shadow-md rounded-[20px] mx-auto'
+            >
+              <div className='bg-white border rounded-[20px] p-[13px] text-center flex flex-col gap-y-2'>
+                <div className='bg-[#F3F6FA] rounded-[20px] h-[282px]'>
+                  <Image
+                    src={product.image}
+                    alt={product.title}
+                    className='h-[100%] rounded-[20px]'
+                  />
+                </div>
+                <div className='bg-[#F3F6FA] rounded-[20px] h-[126px] p-[13px]'>
+                  <h3 className='font-bold text-[25px] text-[#0D63AD] mt-4 leading-[35px]'>
+                    {product.title}
+                  </h3>
+                  <p className='text-lg'>{product.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
@@ -284,17 +351,17 @@ function SampleNextArrow(props) {
       style={{
         ...style,
         display: "block",
-        position: "absolute", 
-        right: "20px",     
-        top: "-10%",  
-        transform: "translateY(-50%)", 
-        zIndex: 2,         
+        position: "absolute",
+        right: "20px",
+        top: "-10%",
+        transform: "translateY(-50%)",
+        zIndex: 2,
         cursor: "pointer",
-        color: "#0D63AD",     
+        color: "#0D63AD",
       }}
       onClick={onClick}
     >
-      <FaArrowRightLong className="text-4xl" />
+      <FaArrowRightLong className='text-4xl' />
     </div>
   );
 }
@@ -307,17 +374,17 @@ function SamplePrevArrow(props) {
       style={{
         ...style,
         display: "block",
-        position: "absolute", 
-        left: "20px",         
-        top: "-10%",          
+        position: "absolute",
+        left: "20px",
+        top: "-10%",
         transform: "translateY(-50%)",
-        zIndex: 2,            
+        zIndex: 2,
         cursor: "pointer",
-        color: "#0D63AD",   
+        color: "#0D63AD",
       }}
       onClick={onClick}
     >
-      <FaArrowLeftLong className="text-4xl" />
+      <FaArrowLeftLong className='text-4xl' />
     </div>
   );
 }

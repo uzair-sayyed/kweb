@@ -50,7 +50,7 @@ export default function HeroBanner() {
         ))}
       </Slider>
 
-      <div className='absolute bottom-[97px] right-[155px] flex max-w-[114px]'>
+      <div className='absolute md:bottom-[97px] bottom-[40px] right-[50%] -translate-x-[-50%] md:right-[155px] flex max-w-[114px]'>
         <button onClick={prevSlide} className='bg-white text-white p-2 transition rounded-s-[30px]'>
           <FaArrowLeftLong className='text-[#0D63AD] w-[30.5px] ' />
         </button>

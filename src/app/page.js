@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <HeroBanner />
       <About />
-      <ProductShowCase />
+      {/* <ProductShowCase /> */}
       <History />
       <BusinessVerticals />
     </>

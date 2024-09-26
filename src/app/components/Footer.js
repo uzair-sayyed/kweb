@@ -9,10 +9,10 @@ import img3 from "../../assets/images/footerimg3.png";
 export default function Footer() {
   return (
     <footer className='pt-16'>
-      <div className='max-w-[1400px] mx-auto grid md:grid-cols-4 gap-8 px-4 leading-[35px]'>
+      <div className='max-w-[1400px] mx-auto grid md:grid-cols-4 gap-4 md:gap-8 px-4 leading-[35px]'>
         <div>
           <h4 className='text-[20px] font-medium mb-4'>Products</h4>
-          <ul>
+          <ul className='hidden md:block'>
             <li>
               <Link href='/products/adhesives' className=''>
                 Plumbing Pipes & Fittings
@@ -44,12 +44,73 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
+
+          <ul className='block md:hidden'>
+            <li>
+              <Link href='/products/adhesives' className=''>
+                Plumbing Pipes & Fittings
+              </Link>
+            </li>
+            <li>
+              <Link href='/products/paints' className=''>
+                Sewerage Drainage Pipes & Fittings
+              </Link>
+            </li>
+            <li>
+              <Link href='/products/faucets' className=''>
+                Agriculture Pipes & Fittings
+              </Link>
+            </li>
+            <li>
+              <Link href='/products/sealants' className=''>
+                Water Tanks
+              </Link>
+            </li>
+            <li>
+              <Link href='/products/sealants' className=''>
+                Industrial Pipes & Fittings
+              </Link>
+            </li>
+            <li>
+              <Link href='/products/sealants' className=''>
+                Cable Protection
+              </Link>
+            </li>
+            <li>
+              <Link href='/news/latest' className=' '>
+                Fire Sprinklers Pipes & Fittings
+              </Link>
+            </li>
+            <li>
+              <Link href='/news/events' className=' '>
+                Urban Infrastructure
+              </Link>
+            </li>
+            <li>
+              <Link href='/news/press-releases' className=' '>
+                Ancillary Products
+              </Link>
+            </li>
+            <li>
+              <Link href='/news/press-releases' className=' '>
+                Solvent Cement
+              </Link>
+            </li>
+            <li>
+              <Link href='/news/press-releases' className=' '>
+                Insulation Tube
+              </Link>
+            </li>
+            <li>
+              <Link href='/news/press-releases' className=' '>
+                Specialty Fittings
+              </Link>
+            </li>
+          </ul>
         </div>
 
-        <div>
-          <h4 className='text-[20px] font-medium mb-4 invisible'>
-            News & Media
-          </h4>
+        <div className='hidden md:block'>
+          <h4 className='text-[20px] font-medium mb-4 invisible '>.</h4>
           <ul>
             <li>
               <Link href='/news/latest' className=' '>
@@ -134,34 +195,50 @@ export default function Footer() {
       </div>
 
       <div className='border-y border-y-[#0000004F] max-w-[1400px] mx-auto mt-[50px]'>
-        <div className='max-w-[85%] flex items-center gap-10 py-[40px]'>
+        <div className='max-w-[85%] flex flex-col md:flex-row items-center gap-6 md:gap-10 py-[40px] mx-auto md:mx-[0px]'>
           <div>
-            {" "}
-            <Image src={logo} className='!h-[72px] w-auto' />
+            <Image src={logo} className='h-[48px] md:!h-[72px] w-auto' />
           </div>
-          <div>
-            <h2 className='text-[20px] leading-[35px] font-semibold text-[#0D63AD]'>
+
+          <div className='text-center md:text-left'>
+            <h2 className='text-[18px] md:text-[20px] leading-[30px] md:leading-[35px] font-semibold text-[#0D63AD]'>
               Proudly Associated With
             </h2>
           </div>
-          <div className='grid md:grid-cols-3 gap-x-10'>
-            <div>
-              <Image src={img1} className='h-[72px] w-auto object-contain' />
-              <span className='leading-[35px]'>Official Partner</span>
+
+          <div className='grid grid-cols-3 md:grid-cols-3 gap-4 md:gap-x-10 text-center'>
+            <div className='flex flex-col items-center md:items-start'>
+              <Image
+                src={img1}
+                className='h-[40px] md:h-[60px] md:h-[72px] w-auto object-contain'
+              />
+              <span className='leading-[30px] md:leading-[35px]'>
+                Official Partner
+              </span>
             </div>
-            <div>
-              <Image src={img2} className='h-[72px] w-auto object-contain' />
-              <span className='leading-[35px]'>Associate Partner</span>
+            <div className='flex flex-col items-center md:items-start'>
+              <Image
+                src={img2}
+                className='h-[40px] md:h-[60px] md:h-[72px] w-auto object-contain'
+              />
+              <span className='leading-[30px] md:leading-[35px]'>
+                Associate Partner
+              </span>
             </div>
-            <div>
-              <Image src={img3} className='h-[72px] w-auto object-contain' />
-              <span className='leading-[35px]'>Associate Partner</span>
+            <div className='flex flex-col items-center md:items-start'>
+              <Image
+                src={img3}
+                className='h-[40px] md:h-[60px] md:h-[72px] w-auto object-contain'
+              />
+              <span className='leading-[30px] md:leading-[35px]'>
+                Associate Partner
+              </span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className='mt-[50px] mb-[42px] max-w-[1400px] mx-auto'>
+      <div className='mt-[50px] mb-[42px] max-w-[1400px] mx-auto px-6'>
         <div>
           <h4 className='font-medium text-[20px] mb-3'>Products</h4>
           <p className='leading-[35px]'>
@@ -177,7 +254,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
-      <div className='max-w-[1400px] mx-auto'>
+      <div className='max-w-[1400px] mx-auto px-6'>
         <p className='leading-[35px]'>
           Please note that the claim "India's No. 1 Pipe Brand" is based on
           findings from TRA's Brand Reports spanning from 2016, 2019 to 2024,
@@ -193,12 +270,14 @@ export default function Footer() {
         </p>
       </div>
 
-      <div className='text-center mt-8 bg-[#EEECEC80] pb-[18px]'>
+      <div className='text-center mt-8 bg-[#EEECEC80] pb-[18px] px-6'>
         <div className='flex justify-center flex-col items-center gap-y-2'>
-          <div className='h-[50px] w-[50px] bg-[#0D63AD] rounded-full flex items-center justify-center mt-[-20px]'>
-            <FaArrowUp className='text-white text-[22px]' />
+          <div className='h-[30px] md:h-[50px] w-[30px] md:w-[50px] bg-[#0D63AD] rounded-full flex items-center justify-center mt-[-12px] mm:mt-[-20px]'>
+            <FaArrowUp className='text-white text-[16px] md:text-[22px]' />
           </div>
-          <p className=''>© 2024-2025 ASTRAL PIPES ALL RIGHTS RESERVED</p>
+          <p className='text-[14px] mt-2 md:mt-0 md:text-[16px]'>
+            © 2024-2025 ASTRAL PIPES ALL RIGHTS RESERVED
+          </p>
         </div>
       </div>
     </footer>
