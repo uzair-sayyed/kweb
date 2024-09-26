@@ -239,7 +239,7 @@ export default function ProductShowcaseSlider() {
 
   return (
     <div className='max-w-[1400px] mx-auto md:py-8 mt-[15px] md:mt-[30px] product_slider'>
-      <div className='grid md:grid-cols-12 '>
+      <div className='grid md:grid-cols-12 overflow-hidden md:overflow-visible'>
         {/* Left side category list */}
         <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto col-span-4 lg:col-span-3 mb-10 md:mb-0'>
           <ul className="!max-w-[100wv]">
@@ -262,8 +262,8 @@ export default function ProductShowcaseSlider() {
         </div>
 
         {/* Products slider */}
-        <div className='md:col-span-8 w-full'>
-          <div className='products_slider relative px-2'>
+        <div className='md:col-span-8 w-full '>
+          <div className='products_slider relative px-2 '>
             <Slider {...settings}>
               {activeCategory.products.map((product) => (
                 <div
