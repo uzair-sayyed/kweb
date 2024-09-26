@@ -238,10 +238,10 @@ export default function ProductShowcaseSlider2() {
   };
 
   return (
-    <div className='max-w-[1400px] mx-auto py-8 mt-[30px] product_slider'>
-      <div className='grid md:grid-cols-12'>
+    <div className='max-w-[1400px] mx-auto md:py-8 mt-[15px] md:mt-[30px] product_slider'>
+      <div className='grid md:grid-cols-12 overflow-hidden'>
         {/* Left side category list */}
-        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto col-span-3'>
+        <div className='border-l border-gray-300 pl-[30px] w-full md:w-auto col-span-3 mb-10 md:mb-0'>
           <ul className="!max-w-[100wv]">
             {categories.map((category) => (
               <li
@@ -268,21 +268,21 @@ export default function ProductShowcaseSlider2() {
               {activeCategory.products.map((product) => (
                 <div
                   key={product.id}
-                  className='max-h-max max-w-[300px] border hover:border-[#0D63AD] hover:shadow-md rounded-[20px] mx-auto'
+                  className='max-h-max max-w-[300px] border hover:border-[#0D63AD] hover:shadow-md rounded-[20px] mx-auto !w-[90%] md:w-full '
                 >
                   <div className='bg-white border rounded-[20px] p-[13px] text-center flex flex-col gap-y-2'>
-                    <div className='bg-[#F3F6FA] rounded-[20px] h-[282px]'>
+                    <div className='bg-[#F3F6FA] rounded-[20px] h-[200px] md:h-[282px]'>
                       <Image
                         src={product.image}
                         alt={product.title}
-                        className='h-[100%] rounded-[20px]'
+                        className='h-[100%] rounded-[20px] object-contain'
                       />
                     </div>
                     <div className='bg-[#F3F6FA] rounded-[20px] h-[126px] p-[13px]'>
-                      <h3 className='font-bold text-[25px] text-[#0D63AD] mt-4 leading-[35px]'>
+                      <h3 className='font-bold text-[18px] md:text-[25px] text-[#0D63AD] mt-0 md:mt-4 leading-[35px]'>
                         {product.title}
                       </h3>
-                      <p className='text-lg'>{product.description}</p>
+                      <p className='text-[14px] md:text-lg'>{product.description}</p>
                     </div>
                   </div>
                 </div>

@@ -8,10 +8,10 @@ import Image from "next/image";
 export default function BusinessVerticals() {
   return (
     <div
-      className=' bg-[#f6f5f5]  pb-10 '
+      className=' bg-[#f6f5f5] pb-10 '
     >
       <div className="max-w-[1400px] mx-auto px-6">
-        <div className="mb-[60px]">
+        <div className="mb-[20px] md:mb-[60px]">
           <h2 className='text-[24px] md:text-[35px] font-medium pt-8'>
             Our Business Verticals
           </h2>

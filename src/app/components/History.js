@@ -35,7 +35,7 @@ const History = () => {
   };
 
   return (
-    <div className='relative  mx-auto py-12 history px-4 md-px-0'>
+    <div className='relative  mx-auto py-6 md:py-12 history px-4 md-px-0'>
       <h2 className='text-[24px] md:text-[35px] font-medium mb-12 max-w-[1400px] mx-auto px-6'>
         1<sup>st</sup> to Introduce in India
       </h2>
@@ -64,7 +64,7 @@ const History = () => {
 
 const NextArrow = ({ onClick }) => (
   <div
-    className='slick-arrow slick-next right-[10%] md:right-[20%] top-[-75px] rounded-full p-3 cursor-pointer text-white'
+    className='slick-arrow slick-next right-[10%] md:right-[20%]  top-[-30px] md:top-[-75px] rounded-full p-3 cursor-pointer text-white'
     onClick={onClick}
   >
     <FaArrowRightLong size={20} className="text-[#0D63AD] text-[30px]" />
@@ -73,7 +73,7 @@ const NextArrow = ({ onClick }) => (
 
 const PrevArrow = ({ onClick }) => (
   <div
-    className='slick-arrow slick-prev left-[76%] top-[-75px] rounded-full p-3 cursor-pointer  text-white'
+    className='slick-arrow slick-prev left-[76%] top-[-30px] md:top-[-75px] rounded-full p-3 cursor-pointer  text-white'
     onClick={onClick}
   >
     <FaArrowLeftLong size={20} className="text-[#0D63AD] text-[30px]" />

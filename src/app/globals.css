@@ -55,6 +55,16 @@ body {
 .products_slider .slick-arrow.slick-prev{
   left: 88% !important;
 }
+@media screen and (max-width: 767px) {
+  .products_slider .slick-arrow.slick-prev{
+    left: 78% !important;
+  }
+  .products_slider .slick-arrow.slick-next{
+    right: 10% !important;
+  
+  }
+  
+}
 .products_slider .slick-arrow::before{
   display: none;
 }
